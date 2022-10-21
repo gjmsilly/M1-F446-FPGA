@@ -46,7 +46,7 @@ DMA_HandleTypeDef hdma_quadspi;
 SRAM_HandleTypeDef hsram1;
 
 /* USER CODE BEGIN PV */
-uint32_t SYS_Event;							//!< ÏµÍ³×´Ì¬ÊÂ¼þ
+uint32_t SYS_Event;							//!< ç³»ç»ŸçŠ¶æ€äº‹ä»¶
 /* USER CODE END PV */
 
 /* Private function prototypes -----------------------------------------------*/
@@ -99,13 +99,13 @@ int main(void)
   MX_QUADSPI_Init();
   /* USER CODE BEGIN 2 */
 	
-	PWR_LED1_ON;	//Éè±¸Í¨µç×´Ì¬Ö¸Ê¾
+	PWR_LED1_ON;	//è®¾å¤‡é€šç”µçŠ¶æ€æŒ‡ç¤º
 	PWR_LED2_OFF;
-	ACQ_LED1_OFF; //Éè±¸²ÉÑù×´Ì¬Ö¸Ê¾
-	ACQ_LED2_OFF; //Éè±¸ÊÂ¼þ½ÓÊÕÖ¸Ê¾ £¨ÊÕ·¢Íê³ÉÒ»´ÎÁÁÃð£©
+	ACQ_LED1_OFF; //è®¾å¤‡é‡‡æ ·çŠ¶æ€æŒ‡ç¤º
+	ACQ_LED2_OFF; //è®¾å¤‡äº‹ä»¶æŽ¥æ”¶æŒ‡ç¤º ï¼ˆæ”¶å‘å®Œæˆä¸€æ¬¡äº®ç­ï¼‰
 	ERR_LED1_OFF; 
-	ERR_LED2_OFF; //Éè±¸ÔËÐÐ×´Ì¬Ö¸Ê¾
-	
+	ERR_LED2_OFF; //è®¾å¤‡è¿è¡ŒçŠ¶æ€æŒ‡ç¤º
+	W5500_Init(); //W5500åˆå§‹åŒ–ï¼Œé…ç½®Socket
   /* USER CODE END 2 */
 
   /* Infinite loop */
@@ -113,7 +113,7 @@ int main(void)
   while (1)
   {
     /* USER CODE END WHILE */
-		W5500_Init(); //W5500³õÊ¼»¯£¬ÅäÖÃSocket	
+			
     /* USER CODE BEGIN 3 */
   }
   /* USER CODE END 3 */
